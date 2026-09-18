@@ -62,13 +62,20 @@ describe('light patterns', () => {
 });
 
 const tick = (game: CatchGame, seconds: number) => { for (let i = 0; i < seconds * 20; i++) game.tick(0.05); };
+const followHearts = (game: CatchGame, seconds: number) => {
+  for (let i = 0; i < seconds * 20; i++) {
+    const nearest = game.hearts.reduce<(typeof game.hearts)[number] | undefined>((found, heart) => !found || heart.y > found.y ? heart : found, undefined);
+    if (nearest) game.move(nearest.x);
+    game.tick(0.05);
+  }
+};
 describe('heart shower', () => {
   it('cannot finish before 75 active seconds, even after catching twenty hearts', () => {
     const game = new CatchGame(() => 0.5);
-    tick(game, 74);
+    followHearts(game, 74);
     expect(game.caught).toBeGreaterThanOrEqual(20);
     expect(game.complete).toBe(false);
-    tick(game, 1.1);
+    followHearts(game, 1.1);
     expect(game.complete).toBe(true);
     const elapsed = game.elapsed;
     tick(game, 10);
@@ -92,15 +99,22 @@ describe('heart shower', () => {
     const game = new CatchGame(() => 0.99);
     game.move(0);
     tick(game, 76);
-    expect(game.caught).toBe(0);
+    expect(game.caught).toBeGreaterThanOrEqual(0);
+    expect(game.caught).toBeLessThan(20);
     expect(game.complete).toBe(false);
     expect(game.assisted).toBe(true);
     expect(game.basketWidth).toBe(166);
     expect(game.basketX).toBe(83);
     game.move(360);
-    tick(game, 25);
+    followHearts(game, 25);
     expect(game.complete).toBe(true);
     expect(game.caught).toBeGreaterThanOrEqual(20);
+  });
+  it('spreads hearts across the sky so an untouched central basket does not win', () => {
+    const game = new CatchGame(() => 0.5);
+    tick(game, 75);
+    expect(game.caught).toBeLessThan(20);
+    expect(game.complete).toBe(false);
   });
 });
 

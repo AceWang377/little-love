@@ -75,6 +75,7 @@ export class CatchGame {
   paused = false;
   private nextSpawn = 0.3;
   private nextId = 0;
+  private lanes: number[] = [];
   constructor(private random = Math.random) {}
   get assisted() { return this.elapsed >= CatchGame.duration; }
   get basketWidth() { return this.assisted ? 166 : 98; }
@@ -90,7 +91,9 @@ export class CatchGame {
     this.nextSpawn -= dt;
     if (this.nextSpawn <= 0) {
       const progress = Math.min(1, this.elapsed / CatchGame.duration);
-      this.hearts.push({ id: this.nextId++, x: 24 + this.random() * 312, y: -18, speed: this.assisted ? 100 : 90 + progress * 65 });
+      if (this.lanes.length === 0) this.lanes = shuffle([32, 106, 180, 254, 328], this.random);
+      const x = this.lanes.pop()! + (this.random() - 0.5) * 16;
+      this.hearts.push({ id: this.nextId++, x, y: -18, speed: this.assisted ? 100 : 90 + progress * 65 });
       this.nextSpawn = this.assisted ? 0.8 : 1.25 - progress * 0.25;
     }
     this.hearts = this.hearts.filter(heart => {

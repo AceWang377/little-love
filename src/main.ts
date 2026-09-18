@@ -218,7 +218,7 @@ async function catcher() {
       slider.focus({ preventScroll: true });
       let assisted = false;
       destroyCanvas = mountCatcher($('catch-field'), model, () => {
-        $('caught').textContent = `${model.caught} of 20 hearts`;
+        $('caught').textContent = model.caught >= 20 ? `${model.caught} hearts, all yours ♡` : `${model.caught} of 20 hearts`;
         $('time').textContent = model.assisted ? 'A little extra love' : `${Math.max(0, Math.ceil(75 - model.elapsed))} seconds of sweetness`;
         slider.value = String(Math.round(model.basketX));
         if (model.assisted && !assisted) { assisted = true; $('status').textContent = 'A bigger basket, a little more time. Keep going, Princess. ♡'; }
