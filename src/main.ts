@@ -77,7 +77,7 @@ function celebrate() {
 }
 
 function welcome() {
-  app.innerHTML = `<section class="screen welcome"><div class="royal-seal">${icon('crown')}</div><p class="eyebrow">A SMALL WORLD, MADE FOR YOU</p><h1 id="title" tabindex="-1">A little adventure<br>for <em>Princess Jayde.</em></h1><p class="welcome-copy">Three little chapters. A sprinkle of magic.<br>And something from my heart, waiting at the end.</p><button class="button primary" id="begin">Let’s find your surprise <span aria-hidden="true">→</span></button><p class="small-note">About 3–5 minutes · Just you, at your own pace</p><div class="welcome-trail" aria-hidden="true">${icon('heart')}<span>········</span>${icon('star')}<span>········</span>${icon('crown')}</div><p class="handwritten">A new little note, every time you finish. ♡</p></section>`;
+  app.innerHTML = `<section class="screen welcome"><div class="royal-seal">${icon('crown')}</div><p class="eyebrow">A SMALL WORLD, MADE FOR YOU</p><h1 id="title" tabindex="-1">A little adventure<br>for <em>Princess Jayde.</em></h1><p class="welcome-copy">Three little chapters. A sprinkle of magic.<br>And something from my heart, waiting at the end.</p><button class="button primary" id="begin">Let’s find your surprise <span aria-hidden="true">→</span></button><p class="small-note">About 2–4 minutes · Just you, at your own pace</p><div class="welcome-trail" aria-hidden="true">${icon('heart')}<span>········</span>${icon('star')}<span>········</span>${icon('crown')}</div><p class="handwritten">A new little note, every time you finish. ♡</p></section>`;
   $('begin').onclick = () => { progress.start(); render(); };
 }
 
@@ -202,7 +202,7 @@ function sequence() {
 async function catcher() {
   const model = new CatchGame();
   const current = generation;
-  app.innerHTML = `<section class="screen catch-screen">${header(2, 'A sky full of love,<br><em>all for you.</em>', 'Move your basket to catch 20 hearts. Enjoy the whole little shower.')}<div class="progress-row"><span id="caught">0 of 20 hearts</span><span id="time">75 seconds of sweetness</span></div>${playArea('<div id="catch-field" role="img" aria-label="Pink hearts falling towards your basket"></div><label class="sr-only" for="basket">Basket position. Use left and right arrows to move.</label><input id="basket" class="basket-slider" type="range" min="0" max="360" value="180" aria-label="Basket position" /><div class="catch-start" id="catch-start"><span aria-hidden="true">♡</span><p>A little shower of affection.</p><button id="catch-begin" class="button primary" disabled>Gathering your hearts…</button><small>Drag the basket, tap the sky, or use ← →</small></div>')}<p id="status" class="status" role="status">No hearts lost. Just lovely ones to catch.</p>${controls()}</section>`;
+  app.innerHTML = `<section class="screen catch-screen">${header(2, 'A sky full of love,<br><em>all for you.</em>', `Catch ${CatchGame.target} hearts in ${CatchGame.duration} seconds. A little extra help if you need it.`)}<div class="progress-row"><span id="caught">0 of ${CatchGame.target} hearts</span><span id="time">${CatchGame.duration} seconds of sweetness</span></div>${playArea('<div id="catch-field" role="img" aria-label="Pink hearts falling towards your basket"></div><label class="sr-only" for="basket">Basket position. Use left and right arrows to move.</label><input id="basket" class="basket-slider" type="range" min="0" max="360" value="180" aria-label="Basket position" /><div class="catch-start" id="catch-start"><span aria-hidden="true">♡</span><p>A little shower of affection.</p><button id="catch-begin" class="button primary" disabled>Gathering your hearts…</button><small>Drag the basket, tap the sky, or use ← →</small></div>')}<p id="status" class="status" role="status">No hearts lost. Just lovely ones to catch.</p>${controls()}</section>`;
   bindControls();
   try {
     const { mountCatcher } = await import('./catcher');
@@ -218,10 +218,11 @@ async function catcher() {
       slider.focus({ preventScroll: true });
       let assisted = false;
       destroyCanvas = mountCatcher($('catch-field'), model, () => {
-        $('caught').textContent = model.caught >= 20 ? `${model.caught} hearts, all yours ♡` : `${model.caught} of 20 hearts`;
-        $('time').textContent = model.assisted ? 'A little extra love' : `${Math.max(0, Math.ceil(75 - model.elapsed))} seconds of sweetness`;
+        $('caught').textContent = model.caught >= CatchGame.target ? `${model.caught} hearts, all yours ♡` : `${model.caught} of ${CatchGame.target} hearts`;
+        const seconds = Math.max(0, Math.ceil((model.assisted ? CatchGame.maxDuration : CatchGame.duration) - model.elapsed));
+        $('time').textContent = `${seconds} ${seconds === 1 ? 'second' : 'seconds'} of ${model.assisted ? 'extra love' : 'sweetness'}`;
         slider.value = String(Math.round(model.basketX));
-        if (model.assisted && !assisted) { assisted = true; $('status').textContent = 'A bigger basket, a little more time. Keep going, Princess. ♡'; }
+        if (model.assisted && !assisted) { assisted = true; $('status').textContent = 'A bigger basket for the last few hearts. Your surprise is almost here, Princess. ♡'; }
       }, () => { if (current === generation) chapterDone(2); });
     };
   } catch {

@@ -179,4 +179,184 @@ Jayde, this is allowed to be that simple. Something sweet, made for you, with no
 
 Just because, Jayde. Because making you a surprise felt like a good use of my time. Because I like the thought of you discovering something kind. Because you are my Princess, and I wanted to give you one more reason to smile. I hope this one worked.`,
   },
+  {
+    title: 'The unimportant details',
+    body: `I want to know the little things, Jayde. Which song you would put on right now. What you would order if every menu suddenly appeared in front of you. The completely unimportant opinion you would happily defend for twenty minutes.
+
+Those details are interesting to me because they are yours. You do not need a remarkable story to have my attention, Princess. Tell me something tiny whenever you feel like it. I would like to keep discovering you.`,
+  },
+  {
+    title: 'An unsent daydream',
+    body: `Here is a daydream, with absolutely no reservations required: a free afternoon, somewhere comfortable to sit, and you nearby. We could talk about something ridiculous or take ages deciding what to eat. I suspect I would be happy with either.
+
+There is no grand itinerary in this imagined afternoon, Jayde. Having your company is the part I keep. Until we get to choose our next little plan, Princess, consider this a place saved for you in my thoughts.`,
+  },
+  {
+    title: 'The royal weather forecast',
+    body: `Today’s forecast for Princess Jayde includes scattered compliments, a warm front of affection, and a strong possibility of someone wishing he could give you a kiss. Conditions may remain delightfully silly throughout the evening.
+
+If your actual weather is less cooperative, please remember that this forecast travels well. It works through rain, grey skies, and days when nothing goes quite as planned. I cannot promise sunshine outside your window, but I can send a bit of warmth with your name on it.`,
+  },
+  {
+    title: 'Your place at the table',
+    body: `You never need to agree with me just to make a conversation easy. I want to hear what you actually think, Jayde, even when your answer takes us somewhere I did not expect.
+
+There is something lovely about getting to know another person’s mind without trying to rearrange it. Your opinions, questions, and changes of heart all have room here. Princess, I care about the person speaking, not whether she follows my script. I would much rather discover yours.`,
+  },
+  {
+    title: 'A message in the margins',
+    body: `If your day were a notebook, I would like to leave a little message in the margin. Somewhere between the shopping list and the things you must remember, you would find: Jayde, I adore having you in my life.
+
+Nothing on the page would need to move out of the way. The message would just be there, quietly keeping you company. This screen will have to do for now, Princess. Imagine a very wonky heart drawn beside these words.`,
+  },
+  {
+    title: 'The right to change your mind',
+    body: `You are allowed to discover that you want something different. A different plan for tonight, a different dream for later, or simply a different flavour of ice cream. You do not have to stay exactly as you were to remain dear to me.
+
+Jayde, getting to know you is something I want to keep doing. There is room for the next version of you, too, Princess. I hope she feels free to be curious about where she is going.`,
+  },
+  {
+    title: 'A very small conspiracy',
+    body: `I have a secret arrangement with this little website. Its job is to distract you with cards and stars while I sneak another affectionate message into your day. So far, I think we make a fairly effective team.
+
+You have uncovered the operation, Jayde, but I hope you will allow it to continue. Our entire agenda is rather transparent: a bit of fun for you and another excuse for me to call you Princess. Hardly the most dangerous conspiracy.`,
+  },
+  {
+    title: 'For the unfinished things',
+    body: `There is probably always going to be something left unfinished. A message, a task, an idea waiting for the right moment. I hope none of it convinces you that you must postpone every nice thing until you catch up.
+
+Jayde, affection can find you halfway through a messy day. So can laughter, a good snack, or this slightly sentimental note. Princess, you are allowed to enjoy something while the rest is still in progress. I wanted to leave that thought here for you.`,
+  },
+  {
+    title: 'The sound I would choose',
+    body: `If this letter came with a soundtrack, I would spend far too long choosing it. Something warm, probably. Something that leaves room for talking. Then I would wonder whether you would pick something completely different.
+
+That might be the better version, Jayde: you choosing a song and me discovering what you like about it. For now, these words arrive quietly. But if you feel like putting on a favourite track, Princess, I would be honoured to provide the accompanying love letter.`,
+  },
+  {
+    title: 'Especially on the quiet days',
+    body: `Some days there is plenty to say. Other days, even explaining that you are tired can feel like an extra task. If this note finds you on one of the quiet days, there is no need to turn it into a conversation.
+
+I still wanted to reach you, Jayde. You can read these words and let them be enough for the moment. Princess, my affection does not depend on getting a clever reply. Sometimes I just want you to know it is here.`,
+  },
+  {
+    title: 'A cheer from the sidelines',
+    body: `Whatever you are learning or working towards, I hope you have room to be a beginner. You do not have to make the difficult parts look effortless for anyone, including me.
+
+Jayde, I would like to cheer for the attempts that nobody else sees: the question asked, the first step taken, the moment you decide to try again. Princess, the result can take its time. I am already fond of the person figuring things out along the way.`,
+  },
+  {
+    title: 'Reserved for your nonsense',
+    body: `Please be informed that a portion of my attention has been reserved for your most unnecessary observations. Strange questions, terrible jokes, dramatic complaints about minor inconveniences: all are welcome here.
+
+I like the thought of us having room to be silly, Jayde. Life supplies enough serious material without our having to add to it every minute. Princess, if you ever need an audience for a thought that has absolutely no practical value, I would be rather pleased to be considered.`,
+  },
+  {
+    title: 'The evening edition',
+    body: `If you are reading this near the end of your day, imagine me turning the volume down on everything for a moment. No more announcements. No urgent questions. Just your name, Jayde, and a few words sent with affection.
+
+I hope you can put down whatever does not need carrying into tonight. Princess, may there be something comfortable waiting for you: a familiar song, a soft pillow, or a little peace. If it is morning instead, save this wish for later.`,
+  },
+  {
+    title: 'One seat beside me',
+    body: `In an imaginary room full of places to sit, I would still be hoping you chose the one beside me. Not because we would need to talk the whole time. I simply like the idea of you being close.
+
+There is something very sweet about company that does not need entertaining every second. Jayde, that is the feeling I am trying to send through this letter. A place next to me, Princess, with no performance expected and plenty of affection available.`,
+  },
+  {
+    title: 'An excellent use of a wish',
+    body: `If I were handed one small wish right now, I might spend it on seeing your expression as you read this. Not a dramatic magical request, I know. The person granting wishes would probably ask whether I was certain.
+
+I think I would be, Jayde. There is something lovely about imagining these words reaching you, but the real you would be better. Until then, Princess, I will settle for sending the affection and letting you keep your reaction all to yourself.`,
+  },
+  {
+    title: 'Your curiosity is welcome',
+    body: `I would love to hear about whatever has caught your interest lately. It does not have to be something I already understand. You can start at the beginning, take a detour, and explain why the tiny details matter.
+
+Jayde, I like the possibility of seeing something differently because you showed it to me. There is a whole world inside another person’s attention. Princess, if you ever want to give me a little tour of yours, I would happily come along.`,
+  },
+  {
+    title: 'A kiss made of punctuation',
+    body: `I have examined the available punctuation and concluded that none of it properly substitutes for a kiss. An x makes a respectable attempt. A heart helps. Several exclamation marks seem a bit too enthusiastic about the whole administrative process.
+
+Nevertheless, Jayde, please accept this modest collection: x, ♡, and one very fond thought. The actual feeling is considerably less tidy than the symbols suggest. Princess, imagine it arriving with a smile from me. That gets a little closer to what I mean.`,
+  },
+  {
+    title: 'When plans take a detour',
+    body: `If something has gone differently from the way you hoped, I will not insist that you find the bright side immediately. Sometimes a disappointment is simply disappointing, and it is nice when someone understands that.
+
+Jayde, this letter cannot rearrange the day for you. It can offer a little company while you decide what comes next. Princess, I am sending affection for the detour as well as the destination. You do not need a perfect plan to be worth caring for.`,
+  },
+  {
+    title: 'A royal snack committee',
+    body: `The royal snack committee has convened and immediately encountered a problem: I do not know what you feel like eating right now. Rather than make an outrageous decision on your behalf, we have deferred entirely to Princess Jayde.
+
+Our other recommendation is simpler. Whatever small thing would make your next few minutes nicer, I hope you get to enjoy it. This committee has no actual authority, but its chairman is very fond of you. He thought that deserved a mention in the minutes.`,
+  },
+  {
+    title: 'An honest little compliment',
+    body: `I could fill this page with enormous compliments, but I would rather start with something I can mean plainly: you matter to me, Jayde. Your thoughts are worth hearing. Your comfort is worth considering. Your company is something I look forward to.
+
+Those sentences do not have much decoration, and I like them that way. Princess, you should not have to untangle a poem to find the affection inside it. Here it is, in words I would happily say to you.`,
+  },
+  {
+    title: 'Postmarked with affection',
+    body: `Imagine this note arriving by a very small postal service. One tiny envelope, a crooked stamp, and a determined little courier who has been instructed to deliver it specifically to Jayde.
+
+Inside is nothing urgent. Just a message that I am thinking of you and would like your day to contain something sweet. Princess, the delivery method may be imaginary, but the fondness is quite real. Please sign for it with whatever expression you are wearing. Even a raised eyebrow will be accepted.`,
+  },
+  {
+    title: 'Space to be proud',
+    body: `If there is something you feel proud of today, I hope you let yourself enjoy it before moving the goalposts. It can be a big achievement or something that was difficult only you knew about.
+
+Jayde, you are allowed to say that a thing mattered and that you are pleased you did it. I would like to hear about it whenever you want to tell me. Princess, there is room here for your happy news, without a smaller voice explaining it away.`,
+  },
+  {
+    title: 'The imaginary flower shop',
+    body: `There is an imaginary flower shop in this letter, and I am being deeply indecisive in it. Something bright? Something delicate? Perhaps you would prefer a plant, or no flowers at all. Clearly, I should ask you before making myself an expert.
+
+For today, Jayde, the gift is the thought behind the imaginary bouquet: I wanted to bring you something lovely just because. Princess, choose whatever flowers you like for this picture. I will be the person smiling as he hands them over.`,
+  },
+  {
+    title: 'No need for perfect timing',
+    body: `There is probably a more elegant time to be sentimental than whenever a little game happens to end. But waiting for the perfect moment seems a poor reason to leave something kind unsaid.
+
+So here it is, Jayde: I care about you, and I like finding ways to show it. Even slightly ridiculous ways involving a basket full of falling hearts. Princess, I hope this note catches you at an ordinary moment and makes it feel a little less ordinary.`,
+  },
+  {
+    title: 'A question for another day',
+    body: `Sometime, I would like to ask you what a really lovely day looks like in your imagination. Not the impressive version you might put in a photograph. The version you would choose if nobody else got a vote.
+
+You do not owe this letter an answer, Jayde. I just like remembering that there are still things I can learn about you. Princess, I hope your real days make room for some of those wishes, including the ones that seem wonderfully small.`,
+  },
+  {
+    title: 'Fondness, without a filter',
+    body: `You do not need to look as though you are having the best day of your life to be lovely to me. There is room for an untidy morning, a serious face, and days when dressing up sounds exhausting.
+
+Jayde, I am writing to a person, not a carefully selected photograph. Princess can be comfortable, distracted, or in need of another hour of sleep. I hope the affection in these words reaches whichever version of you happens to be reading them.`,
+  },
+  {
+    title: 'A tiny museum of nice things',
+    body: `If I could build a tiny museum for your day, I would fill it with things that made you happy. A sentence you liked, a colour that caught your eye, a small success nobody else noticed. You would choose every exhibit.
+
+Jayde, I hope this little adventure earns a very modest corner, perhaps beside the gift shop. No need for a grand display, Princess. I would be pleased just to be among the things that made today a bit nicer for you.`,
+  },
+  {
+    title: 'The smile I cannot see',
+    body: `The funny thing about making a surprise like this is that I cannot see the moment it arrives. You might be smiling, concentrating, or wondering how many times I can possibly put a heart on one page.
+
+All fair responses, Jayde. I like knowing that the experience belongs to you once I send it. Princess, you can enjoy it in your own way, at your own pace. My part was making something with affection. This little part, finding it, is entirely yours.`,
+  },
+  {
+    title: 'A wish for tomorrow',
+    body: `For tomorrow, I wish you one thing to look forward to and one thing that feels easier than it did today. Nothing spectacular is required. A pleasant surprise or a little progress would do very nicely.
+
+And if tomorrow turns out to be complicated, Jayde, I hope you remember that you do not have to make it look simple for me. Princess, I would like to hear the real version. There is affection waiting for you on both kinds of day.`,
+  },
+  {
+    title: 'The last word is yours',
+    body: `I have had quite a lot to say in this little note, so I think the last word should belong to you. It can be spoken, typed, or kept entirely in your head. You can even decide that the last word is a laugh.
+
+Before I hand it over, Jayde, one thought from me: making room for your happiness feels like a lovely thing to do. Thank you for visiting this small world, Princess. Take whatever sweetness you like with you when you go.`,
+  },
 ] as const;

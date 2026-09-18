@@ -66,8 +66,9 @@ export class SequenceGame {
 
 export interface FallingHeart { id: number; x: number; y: number; speed: number; }
 export class CatchGame {
-  static readonly duration = 75;
-  static readonly target = 20;
+  static readonly duration = 25;
+  static readonly maxDuration = 30;
+  static readonly target = 8;
   elapsed = 0;
   caught = 0;
   basketX = 180;
@@ -79,14 +80,14 @@ export class CatchGame {
   constructor(private random = Math.random) {}
   get assisted() { return this.elapsed >= CatchGame.duration; }
   get basketWidth() { return this.assisted ? 166 : 98; }
-  get complete() { return this.elapsed >= CatchGame.duration && this.caught >= CatchGame.target; }
+  get complete() { return this.elapsed >= CatchGame.maxDuration || (this.elapsed >= CatchGame.duration && this.caught >= CatchGame.target); }
   move(x: number) {
     if (!this.paused && !this.complete && Number.isFinite(x)) this.basketX = Math.max(this.basketWidth / 2, Math.min(360 - this.basketWidth / 2, x));
   }
   tick(deltaSeconds: number) {
     if (this.paused || this.complete) return;
-    const dt = Math.max(0, Math.min(deltaSeconds, 0.1));
-    this.elapsed += dt;
+    const dt = Math.max(0, Math.min(deltaSeconds, 0.1, CatchGame.maxDuration - this.elapsed));
+    this.elapsed = Math.min(CatchGame.maxDuration, this.elapsed + dt);
     this.basketX = Math.max(this.basketWidth / 2, Math.min(360 - this.basketWidth / 2, this.basketX));
     this.nextSpawn -= dt;
     if (this.nextSpawn <= 0) {

@@ -1,6 +1,6 @@
 # A little adventure for Princess Jayde
 
-A small pink corner of the internet, made with love by Ace. Three gentle games unlock one of thirty handwritten notes.
+A small pink corner of the internet, made with love by Ace. Three gentle games unlock one of sixty handwritten notes.
 
 ## Play
 
@@ -8,11 +8,11 @@ A small pink corner of the internet, made with love by Ace. Three gentle games u
 
 1. Find eight pairs of cards.
 2. Repeat four patterns of three to six lights.
-3. Catch twenty hearts during a 75-second shower. Extra time and a bigger basket are available automatically.
+3. Catch eight hearts during a 25-second shower. If needed, a bigger basket gives up to five extra seconds; the chapter always finishes by 30 active seconds.
 
 Touch, mouse, and keyboard work. The arrow keys or the slider move the basket. Pause stops play; returning from a background tab requires resuming. No account, server, API key, or AI call is needed.
 
-Completed chapters and letter history stay in this browser's local storage. Refresh restarts an unfinished chapter. The first thirty completed adventures draw distinct notes; the next cycle cannot begin with the previous cycle's last note. Refreshing or hugging never redraws a letter. Clearing browser data resets history. Storage-disabled browsers keep in-memory progress until the page closes.
+Completed chapters and letter history stay in this browser's local storage. Refresh restarts an unfinished chapter. Each cycle of sixty completed adventures draws distinct notes; the next cycle cannot begin with the previous cycle's last note. Existing thirty-letter saves keep their current note and progress, with the thirty new notes added to their unread pool once. Refreshing or hugging never redraws a letter. Clearing browser data resets history. Storage-disabled browsers keep in-memory progress until the page closes.
 
 ## Develop
 
@@ -32,7 +32,7 @@ The app is served under `/little-love/` in development and production. The Pages
 
 - `src/games.ts`: renderer-independent matching, sequence, and catching rules.
 - `src/progress.ts`: chapter checkpoints and non-repeating letter draws.
-- `src/letters.ts`: thirty editable notes.
+- `src/letters.ts`: sixty editable notes.
 - `src/main.ts`: accessible DOM games, menus, and letter presentation.
 - `src/catcher.ts`: Phaser rendering and basket input.
 

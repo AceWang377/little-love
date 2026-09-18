@@ -3,6 +3,7 @@ import { shuffle } from './games';
 
 export const storageKey = 'little-love-v1';
 export interface Progress {
+  catalogSize: number;
   stage: number;
   started: boolean;
   currentLetter: number | null;
@@ -10,7 +11,7 @@ export interface Progress {
   lastLetter: number | null;
 }
 type StorageLike = Pick<Storage, 'getItem' | 'setItem'>;
-const fresh = (): Progress => ({ stage: 0, started: false, currentLetter: null, remaining: [], lastLetter: null });
+const fresh = (): Progress => ({ catalogSize: letters.length, stage: 0, started: false, currentLetter: null, remaining: [], lastLetter: null });
 const validLetter = (id: unknown): id is number => Number.isInteger(id) && Number(id) >= 0 && Number(id) < letters.length;
 
 export class ProgressStore {
@@ -21,7 +22,19 @@ export class ProgressStore {
       if (parsed && Number.isInteger(parsed.stage) && parsed.stage >= 0 && parsed.stage <= 3 && typeof parsed.started === 'boolean'
         && Array.isArray(parsed.remaining) && parsed.remaining.every(validLetter) && new Set(parsed.remaining).size === parsed.remaining.length
         && (parsed.currentLetter === null || validLetter(parsed.currentLetter)) && (parsed.lastLetter === null || validLetter(parsed.lastLetter))
-        && (parsed.stage !== 3 || validLetter(parsed.currentLetter))) this.value = parsed;
+        && (parsed.stage !== 3 || validLetter(parsed.currentLetter))
+        && (parsed.catalogSize === undefined || parsed.catalogSize === 30 || parsed.catalogSize === letters.length)) {
+        this.value = { ...parsed, catalogSize: parsed.catalogSize ?? 30 };
+        if (this.value.catalogSize < letters.length) {
+          // Old saves with no draws yet need the full deck on their first finish.
+          if (this.value.lastLetter !== null) {
+            const added = letters.map((_, i) => i).slice(this.value.catalogSize);
+            this.value.remaining = shuffle([...this.value.remaining, ...added], this.random);
+          }
+          this.value.catalogSize = letters.length;
+          this.save();
+        }
+      }
     } catch { /* Keep a usable in-memory session when storage is unavailable. */ }
   }
   private save() { try { this.storage?.setItem(storageKey, JSON.stringify(this.value)); } catch { /* In-memory progress stays intact. */ } }
